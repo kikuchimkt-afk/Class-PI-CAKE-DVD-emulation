@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let lesson = 0; lesson < 8; lesson++) {
             chapters.push({
                 unit: unit,
-                title: lessonNames[lesson],
+                title: `U${unit}-${lesson + 1} ${lessonNames[lesson]}`,
                 chapterNumber: CHAPTER_OFFSET + (unit - 1) * 8 + lesson + 1
             });
         }
