@@ -4,219 +4,305 @@ const SCRIPT_DATA = {
     // ===== Unit 1 =====
     1: { // U1-1 Let's Study! "Charlie's Family"
         en: `<h3>🇺🇸 English Script</h3>
-<p><span class="speaker">Charlie:</span> This is my family. This is my mom. This is my dad. This is my sister, Kate. And this is my brother. He's a baby.</p>
-<p><span class="speaker">Amber:</span> He's so cute! What's his name?</p>
-<p><span class="speaker">Charlie:</span> His name is Kevin.</p>
-<p><span class="speaker">Amber:</span> How old is he?</p>
-<p><span class="speaker">Charlie:</span> He's one year old.</p>
-<p><span class="speaker">Amber:</span> Wow. He's very small.</p>
-<p><span class="speaker">Charlie:</span> Yes, he is. He can't walk yet. But he can crawl.</p>
+<p><span class="speaker">Owen:</span> Hi.</p>
+<p><span class="speaker">C's Aunt:</span> Hi.</p>
+<p><span class="speaker">Owen:</span> I'm Owen, Charlie's friend. Are you Charlie's mother?</p>
+<p><span class="speaker">C's Aunt:</span> No, I'm not. I'm his aunt. Charlie!</p>
+<p><span class="speaker">Charlie:</span> Hi, Owen.</p>
+<p><span class="speaker">Owen:</span> Hi, Charlie.</p>
+<p><span class="speaker">Charlie:</span> Come on in.</p>
+<p><span class="speaker">C's Aunt:</span> Bye, kids.</p>
+<p><span class="speaker">C&O:</span> Bye.</p>
+<p><span class="speaker">Charlie:</span> Mom. This is Owen. Owen, this is my mom.</p>
+<p><span class="speaker">Owen:</span> Nice to meet you.</p>
+<p><span class="speaker">C's Mom:</span> Nice to meet you too, Owen.</p>
+<p><span class="speaker">Owen:</span> Wow, your mom and your aunt really look alike.</p>
+<p><span class="speaker">Charlie:</span> They do, right? Kate!</p>
+<p><span class="speaker">Kate:</span> Yes, Charlie?</p>
+<p><span class="speaker">Owen:</span> Are you Charlie's sister?</p>
+<p><span class="speaker">Kate:</span> Yes, I am. You must be Owen. Nice to meet you.</p>
+<p><span class="speaker">Owen:</span> Nice to meet you too.</p>
+<p><span class="speaker">Kate:</span> It's my new costume.</p>
+<p><span class="speaker">Owen:</span> Cute.</p>
+<p><span class="speaker">Kate:</span> Thank you.</p>
 <p><span class="speaker">Stanley:</span> Now, let's check today's target.</p>
 <hr>
 <p><em>★ Point:</em></p>
-<p><span class="speaker">Narrator:</span> Who is she? She is my mom. Who is he? He is my dad.</p>
+<p><span class="speaker">Narrator:</span> Are you Charlie's sister?<br>Yes, I am.<br>Are you Charlie's sister?<br>No, I'm not.</p>
 <p><span class="speaker">Stanley:</span> Good job! That's it for now. See you next time.</p>`,
         ja: `<h3>🇯🇵 日本語スクリプト</h3>
-<p><span class="speaker">チャーリー：</span>これはぼくの家族だよ。これがぼくのお母さん。これがぼくのお父さん。これがぼくの姉のケイト。そしてこれがぼくの弟。赤ちゃんなんだ。</p>
-<p><span class="speaker">アンバー：</span>とってもかわいい！名前は何？</p>
-<p><span class="speaker">チャーリー：</span>名前はケビンだよ。</p>
-<p><span class="speaker">アンバー：</span>何歳なの？</p>
-<p><span class="speaker">チャーリー：</span>1歳だよ。</p>
-<p><span class="speaker">アンバー：</span>わあ。とても小さいね。</p>
-<p><span class="speaker">チャーリー：</span>うん、そうなんだ。まだ歩けないんだ。でもハイハイはできるよ。</p>
+<p><span class="speaker">オーウェン：</span>こんにちは。</p>
+<p><span class="speaker">チャーリーのおば：</span>こんにちは。</p>
+<p><span class="speaker">オーウェン：</span>ぼくはチャーリーの友だちのオーウェンです。あなたはチャーリーのお母さんですか。</p>
+<p><span class="speaker">チャーリーのおば：</span>いいえ、ちがうわ。わたしはかれのおばよ。チャーリー！</p>
+<p><span class="speaker">チャーリー：</span>やあ、オーウェン。</p>
+<p><span class="speaker">オーウェン：</span>やあ、チャーリー。</p>
+<p><span class="speaker">チャーリー：</span>どうぞ入って。</p>
+<p><span class="speaker">チャーリーのおば：</span>じゃあね。</p>
+<p><span class="speaker">チ＆オ：</span>バイバイ。</p>
+<p><span class="speaker">チャーリー：</span>お母さん。こちらはオーウェン。オーウェン、こちらはぼくのお母さんだよ。</p>
+<p><span class="speaker">オーウェン：</span>はじめまして。</p>
+<p><span class="speaker">チャーリーの母：</span>はじめまして、オーウェン。</p>
+<p><span class="speaker">オーウェン：</span>わあ、君のお母さんとおばさん、とてもそっくりだね。</p>
+<p><span class="speaker">チャーリー：</span>そうでしょ？ケイト！</p>
+<p><span class="speaker">ケイト：</span>何、チャーリー？</p>
+<p><span class="speaker">オーウェン：</span>君はチャーリーのお姉さんですか。</p>
+<p><span class="speaker">ケイト：</span>ええ、そうよ。あなたはオーウェンね。はじめまして。</p>
+<p><span class="speaker">オーウェン：</span>はじめまして。</p>
+<p><span class="speaker">ケイト：</span>これ、新しいコスチュームなの。</p>
+<p><span class="speaker">オーウェン：</span>かわいい。</p>
+<p><span class="speaker">ケイト：</span>ありがとう。</p>
 <p><span class="speaker">スタンリー：</span>さあ、今日のターゲットを確認しよう。</p>
 <hr>
 <p><em>★ポイント説明：</em></p>
-<p><span class="speaker">ナレーター：</span>かの女はだれですか。かの女はわたしのお母さんです。かれはだれですか。かれはわたしのお父さんです。</p>
+<p><span class="speaker">ナレーター：</span>あなたはチャーリーのお姉さんですか。<br>はい、そうです。<br>あなたはチャーリーのお姉さんですか。<br>いいえ、ちがいます。</p>
 <p><span class="speaker">スタンリー：</span>よくできました！今回はこれでおしまい。またね。</p>`
     },
     2: { // U1-2 Let's Study! "At School"
         en: `<h3>🇺🇸 English Script</h3>
-<p><span class="speaker">Charlie:</span> Hi, Owen.</p>
-<p><span class="speaker">Owen:</span> Hi, Charlie. Let's go to the gym.</p>
-<p><span class="speaker">Charlie:</span> OK!</p>
-<p><span class="speaker">Owen:</span> Look at the clock. It's eight thirty.</p>
-<p><span class="speaker">Charlie:</span> Oh no! We're late! Come on!</p>
-<p><span class="speaker">Owen:</span> Let me get my bag first.</p>
-<p><span class="speaker">Charlie:</span> OK. Hurry!</p>
+<p><span class="speaker">Charlie:</span> Hi, Kate.</p>
+<p><span class="speaker">Kate:</span> Hi, Charlie. How are you?</p>
+<p><span class="speaker">Charlie:</span> Pretty good. Hey, that girl is waving at you.</p>
+<p><span class="speaker">Kate:</span> Oh, that's Amber. She's my friend. Hi, Amber.</p>
+<p><span class="speaker">Amber:</span> Hi. Is he your brother?</p>
+<p><span class="speaker">Kate:</span> Yes.</p>
+<p><span class="speaker">Charlie:</span> Hello.</p>
+<p><span class="speaker">Amber:</span> Hello.</p>
+<p><span class="speaker">Kate:</span> That woman is waving at you, Charlie.</p>
+<p><span class="speaker">Charlie:</span> That's Ms. Ryan. She's my teacher. It's time for the class. I have to go. It was nice to meet you, Amber.</p>
+<p><span class="speaker">Amber:</span> You too, Charlie.</p>
+<p><span class="speaker">Kate:</span> Amber, we have to go too.</p>
 <p><span class="speaker">Stanley:</span> Now, let's check today's target.</p>
 <hr>
 <p><em>★ Point:</em></p>
-<p><span class="speaker">Narrator:</span> What's this? It's a clock. What's that? It's a piano.</p>
+<p><span class="speaker">Narrator:</span> That's Owen. He's my friend. That's Ms. Ryan. She's a math teacher.</p>
 <p><span class="speaker">Stanley:</span> Good job! That's it for now. See you next time.</p>`,
         ja: `<h3>🇯🇵 日本語スクリプト</h3>
-<p><span class="speaker">チャーリー：</span>やあ、オーウェン。</p>
-<p><span class="speaker">オーウェン：</span>やあ、チャーリー。体育館に行こうよ。</p>
-<p><span class="speaker">チャーリー：</span>いいよ！</p>
-<p><span class="speaker">オーウェン：</span>時計を見て。8時半だよ。</p>
-<p><span class="speaker">チャーリー：</span>大変だ！遅刻だよ！急ごう！</p>
-<p><span class="speaker">オーウェン：</span>先にかばんを取らせて。</p>
-<p><span class="speaker">チャーリー：</span>分かった。急いで！</p>
+<p><span class="speaker">チャーリー：</span>やあ、ケイト。</p>
+<p><span class="speaker">ケイト：</span>やあ、チャーリー。調子はどう？</p>
+<p><span class="speaker">チャーリー：</span>すごくいいよ。ねえ、あの女の子が君に手をふっているよ。</p>
+<p><span class="speaker">ケイト：</span>あら、あちらはアンバーよ。かの女はわたしの友だちよ。やあ、アンバー。</p>
+<p><span class="speaker">アンバー：</span>やあ。かれはあなたの弟？</p>
+<p><span class="speaker">ケイト：</span>そうだよ。</p>
+<p><span class="speaker">チャーリー：</span>こんにちは。</p>
+<p><span class="speaker">アンバー：</span>こんにちは。</p>
+<p><span class="speaker">ケイト：</span>あの女の人があなたに手をふっているよ、チャーリー。</p>
+<p><span class="speaker">チャーリー：</span>あちらはライアン先生だよ。かの女はぼくの先生だよ。授業の時間だ。行かなきゃ。会えてよかったよ、アンバー。</p>
+<p><span class="speaker">アンバー：</span>わたしもよ、チャーリー。</p>
+<p><span class="speaker">ケイト：</span>アンバー、わたしたちも行かなきゃ。</p>
 <p><span class="speaker">スタンリー：</span>さあ、今日のターゲットを確認しよう。</p>
 <hr>
 <p><em>★ポイント説明：</em></p>
-<p><span class="speaker">ナレーター：</span>これは何ですか。時計です。あれは何ですか。ピアノです。</p>
+<p><span class="speaker">ナレーター：</span>あちらはオーウェンです。かれはぼくの友だちです。あちらはライアン先生です。かの女は算数の先生です。</p>
 <p><span class="speaker">スタンリー：</span>よくできました！今回はこれでおしまい。またね。</p>`
     },
     3: { // U1-3 Introduction "Plants"
         en: `<h3>🇺🇸 English Script</h3>
-<p><span class="speaker">Narrator:</span> What do plants need to grow? Plants need water, sunshine, and soil. Let's plant a seed and watch it grow!</p>
-<p>First, put some soil in a pot. Next, make a small hole in the soil. Then, put the seed in the hole. Cover the seed with soil. Water the seed every day. Put the pot in a sunny place.</p>
-<p>In a few days, a small sprout will come out of the soil. The sprout will grow bigger and bigger. Soon, it will become a beautiful plant!</p>
-<p>Plants are very important. They give us food, clean air, and beautiful flowers. Take care of plants!</p>`,
+<p><span class="speaker">Narrator:</span> There are lots of plants around us.<br>We use plants for many things.</p>
+<p>We eat plants, such as fruit and vegetables.<br>What fruit or vegetables do you like?<br>Apples, chestnuts, or sweet potatoes?<br>They're all plants, of course.</p>
+<p>And do you know that sugar is made from plants called sugarcane?</p>
+<p>This is sugarcane.<br>We cut the sugarcane and squeeze the liquid out.<br>Then we boil the liquid to make sugar.</p>
+<p>But we don't just use plants for food.</p>
+<p>We use plants for other things too.</p>
+<p>What are these?<br>Yes, they're rubber bands.<br>Rubber is also made from plants.<br>Rubber is made from the latex of gum trees.<br>Watch the latex drip from a gum tree.</p>
+<p>And some plastic is made from plants, like corn, sweet potatoes, rice, and others.<br>Plastic made from plants is returned to nature.<br>It's eco-friendly.</p>
+<p>Plants are very precious to us.</p>
+<p>Treasure plants and treasure nature.</p>`,
         ja: `<h3>🇯🇵 日本語スクリプト</h3>
-<p><span class="speaker">ナレーター：</span>植物が育つには何が必要でしょうか。植物には水、日光、そして土が必要です。種をまいて育つのを見てみましょう！</p>
-<p>まず、鉢に土を入れます。次に、土に小さな穴をあけます。そして、穴に種を入れます。種を土でおおいます。毎日水をやります。鉢を日当たりのよい場所に置きます。</p>
-<p>数日で、小さな芽が土から出てきます。芽はどんどん大きくなります。やがて、きれいな植物になります！</p>
-<p>植物はとても大切です。食べ物、きれいな空気、美しい花をくれます。植物を大切にしましょう！</p>`
+<p><span class="speaker">ナレーター：</span>わたしたちの周りには たくさんの植物があります。<br>わたしたちは植物をいろいろなものに使います。</p>
+<p>わたしたちは、果物や野菜などの植物を食べます。<br>あなたは何の果物や野菜が好きですか。<br>リンゴ、クリ、それともサツマイモ？<br>それらは もちろん、すべて植物です。</p>
+<p>あなたは砂糖もサトウキビという植物からできているのを知っていますか。</p>
+<p>これはサトウキビです。<br>サトウキビを切って、液をしぼり出します。<br>そして、その液を煮詰めて、砂糖を作ります。</p>
+<p>でもわたしたちは、食べるためだけに植物を利用するのではありません。</p>
+<p>わたしたちは、植物をほかのものにも使います。</p>
+<p>これらは何でしょうか。<br>そう、輪ゴムです。<br>ゴムも植物からできています。<br>ゴムはゴムの木のラテックス（ゴムの原料になる樹液）からできています。<br>ゴムの木からラテックスが垂れているのを見てください。</p>
+<p>また、トウモロコシ、サツマイモ、米などの植物から作られるプラスチックがあります。<br>植物から作られたプラスチックは やがて自然にかえります。<br>環境に やさしいのです。</p>
+<p>植物は わたしたちにとって とても大切なものです。</p>
+<p>植物を大切にして、自然を大切にしましょう。</p>`
     },
     4: { // U1-4 Phonics: -an, -en, -it, -ot, -ug
         en: `<h3>🇺🇸 English Script</h3>
 <p><em>※イラストでわかりにくい単語のみ、和訳を入れています。</em></p>
-<p><strong>-an:</strong> fan, man, pan, can, van</p>
-<p><strong>-en:</strong> hen, ten, pen, men, den</p>
-<p><strong>-it:</strong> hit, sit, bit, kit, pit</p>
-<p><strong>-ot:</strong> hot, pot, dot, lot, got</p>
-<p><strong>-ug:</strong> bug, mug, rug, hug, jug</p>`,
+<p>hen, sit, kit, hit, dot, hot, hug</p>`,
         ja: `<h3>🇯🇵 日本語スクリプト</h3>
-<p><em>※フォニックス - ライム（韻）の練習</em></p>
-<p><strong>-an:</strong> fan(扇風機), man(男の人), pan(鍋), can(缶), van(バン)</p>
-<p><strong>-en:</strong> hen(めんどり), ten(10), pen(ペン), men(男の人たち), den(ほら穴)</p>
-<p><strong>-it:</strong> hit(打つ), sit(座る), bit(少し), kit(道具), pit(穴)</p>
-<p><strong>-ot:</strong> hot(暑い), pot(鍋), dot(点), lot(たくさん), got(手に入れた)</p>
-<p><strong>-ug:</strong> bug(虫), mug(マグカップ), rug(じゅうたん), hug(抱きしめる), jug(水差し)</p>`
+<p><em>※イラストでわかりにくい単語のみ、和訳を入れています。</em></p>
+<p>hen(メンドリ), sit(座る), kit(道具一式), hit(打つ), dot(点), hot(暑い、熱い), hug(だきしめる)</p>`
     },
     5: { // U1-5 Phonics: p, b, t, d
         en: `<h3>🇺🇸 English Script</h3>
 <p><em>※イラストでわかりにくい単語のみ、和訳を入れています。</em></p>
-<p><strong>p:</strong> pig, pen, pin, pot, pop</p>
-<p><strong>b:</strong> bat, bed, big, box, bus</p>
-<p><strong>t:</strong> top, ten, tap, tip, tub</p>
-<p><strong>d:</strong> dog, dig, dip, dot, dug</p>`,
+<p>pop, bun, tap, dot, dam</p>`,
         ja: `<h3>🇯🇵 日本語スクリプト</h3>
-<p><em>※フォニックス - 子音の練習</em></p>
-<p><strong>p:</strong> pig(ブタ), pen(ペン), pin(ピン), pot(鍋), pop(はじける)</p>
-<p><strong>b:</strong> bat(バット), bed(ベッド), big(大きい), box(箱), bus(バス)</p>
-<p><strong>t:</strong> top(上), ten(10), tap(軽くたたく), tip(先端), tub(おけ)</p>
-<p><strong>d:</strong> dog(犬), dig(掘る), dip(ひたす), dot(点), dug(掘った)</p>`
+<p><em>※イラストでわかりにくい単語のみ、和訳を入れています。</em></p>
+<p>pop(炭酸飲料), bun(丸いパン), tap(じゃ口), dot(点), dam(ダム)</p>`
     },
     6: { // U1-6 Let's Study! "After School"
         en: `<h3>🇺🇸 English Script</h3>
-<p><span class="speaker">Kate:</span> Hi, Amber.</p>
-<p><span class="speaker">Amber:</span> Hi, Kate. Are you busy tomorrow?</p>
-<p><span class="speaker">Kate:</span> I have my dance lesson from two.</p>
-<p><span class="speaker">Amber:</span> How long is your dance lesson?</p>
-<p><span class="speaker">Kate:</span> It's two hours. Why?</p>
-<p><span class="speaker">Amber:</span> I'm going to go to the circus. Do you want to go with me?</p>
-<p><span class="speaker">Kate:</span> I'd love to go. What time does it start?</p>
-<p><span class="speaker">Amber:</span> It starts at five.</p>
-<p><span class="speaker">Kate:</span> Ah, sorry. I have to be at home by six.</p>
-<p><span class="speaker">Amber:</span> No problem. You'll have enough time.</p>
-<p><span class="speaker">Kate:</span> Oh. How long is the circus performance?</p>
-<p><span class="speaker">Amber:</span> It's 30 minutes.</p>
-<p><span class="speaker">Kate:</span> Only 30 minutes?</p>
-<p><span class="speaker">Amber:</span> Yes. All the performers are hamsters. They're so cute.</p>
-<p><span class="speaker">Kate:</span> Wow, that sounds fun.</p>
+<p><span class="speaker">Kate:</span> Charlie, you look tired. Are you OK?</p>
+<p><span class="speaker">Charlie:</span> Yeah, but Ms. Ryan gave us a lot of homework.</p>
+<p><span class="speaker">Kate:</span> Is Ms. Ryan strict?</p>
+<p><span class="speaker">Charlie:</span> No, she's not. She's very nice, but I don't like homework.</p>
+<p><span class="speaker">Amber:</span> Yeah, me neither.</p>
+<p><span class="speaker">Charlie:</span> Well, I have to go. I'm going to go to the library with Owen.</p>
+<p><span class="speaker">Amber:</span> Owen?</p>
+<p><span class="speaker">Kate:</span> Owen is Charlie's friend.</p>
+<p><span class="speaker">Charlie:</span> He's my best friend.</p>
+<p><span class="speaker">Amber:</span> I see. Is he funny?</p>
+<p><span class="speaker">Charlie:</span> Yes, he is. He makes a lot of funny faces.</p>
+<p><span class="speaker">Amber:</span> Nice! Well, good luck with your homework.</p>
+<p><span class="speaker">Charlie:</span> Thanks. Bye.</p>
+<p><span class="speaker">K&A:</span> Bye.</p>
 <p><span class="speaker">Stanley:</span> Now, let's check today's target.</p>
 <hr>
 <p><em>★ Point:</em></p>
-<p><span class="speaker">Narrator:</span> How long is the guitar lesson? It's forty minutes. How long is the movie? It's two hours.</p>
+<p><span class="speaker">Narrator:</span> Is Owen nice?<br>Yes, he is.<br>Is Amber easygoing?<br>No, she's not.</p>
 <p><span class="speaker">Stanley:</span> Good job! That's it for now. See you next time.</p>`,
         ja: `<h3>🇯🇵 日本語スクリプト</h3>
-<p><span class="speaker">ケイト：</span>やあ、アンバー。</p>
-<p><span class="speaker">アンバー：</span>やあ、ケイト。明日はいそがしい？</p>
-<p><span class="speaker">ケイト：</span>2時からダンスの練習があるんだ。</p>
-<p><span class="speaker">アンバー：</span>ダンスの練習時間はどのくらい？</p>
-<p><span class="speaker">ケイト：</span>2時間だよ。どうして？</p>
-<p><span class="speaker">アンバー：</span>サーカスに行くの。いっしょに行かない？</p>
-<p><span class="speaker">ケイト：</span>行きたい。何時に始まるの？</p>
-<p><span class="speaker">アンバー：</span>5時に始まるよ。</p>
-<p><span class="speaker">ケイト：</span>ああ、ごめん。6時までに帰らなきゃならないの。</p>
-<p><span class="speaker">アンバー：</span>心配ないわ。十分、時間があるよ。</p>
-<p><span class="speaker">ケイト：</span>ええ。サーカス（の上演時間）はどのくらいなの？</p>
-<p><span class="speaker">アンバー：</span>30分間よ。</p>
-<p><span class="speaker">ケイト：</span>たったの30分？</p>
-<p><span class="speaker">アンバー：</span>うん。パフォーマーはみんな、ハムスターなんだ。とてもかわいいよ。</p>
-<p><span class="speaker">ケイト：</span>わあ、楽しそう。</p>
+<p><span class="speaker">ケイト：</span>チャーリー、疲れているみたいね。大丈夫？</p>
+<p><span class="speaker">チャーリー：</span>うん、でもライアン先生がぼくたちにたくさんの宿題を出したんだ。</p>
+<p><span class="speaker">ケイト：</span>ライアン先生は厳しいの？</p>
+<p><span class="speaker">チャーリー：</span>ううん、厳しくないよ。かの女はとてもやさしいよ。でも、ぼく、宿題が好きではないんだ。</p>
+<p><span class="speaker">アンバー：</span>わたしも好きじゃないな。</p>
+<p><span class="speaker">チャーリー：</span>じゃあ、行かなきゃ。オーウェンと図書館に行くんだ。</p>
+<p><span class="speaker">アンバー：</span>オーウェン？</p>
+<p><span class="speaker">ケイト：</span>オーウェンはチャーリーの友だちよ。</p>
+<p><span class="speaker">チャーリー：</span>かれはぼくの親友さ。</p>
+<p><span class="speaker">アンバー：</span>そうなの。かれはおもしろいの？</p>
+<p><span class="speaker">チャーリー：</span>うん、おもしろいよ。かれはおもしろい顔をたくさんするよ。</p>
+<p><span class="speaker">アンバー：</span>いいね！じゃあ、宿題がんばってね。</p>
+<p><span class="speaker">チャーリー：</span>ありがとう。バイバイ。</p>
+<p><span class="speaker">ケ＆ア：</span>バイバイ。</p>
 <p><span class="speaker">スタンリー：</span>さあ、今日のターゲットを確認しよう。</p>
 <hr>
 <p><em>★ポイント説明：</em></p>
-<p><span class="speaker">ナレーター：</span>ギターのレッスン時間はどのくらいですか。40分間です。その映画（の上演時間）はどのくらいですか。2時間です。</p>
+<p><span class="speaker">ナレーター：</span>オーウェンは親切ですか。<br>はい、親切です。<br>アンバーはのんきですか。<br>いいえ、のんきではありません。</p>
 <p><span class="speaker">スタンリー：</span>よくできました！今回はこれでおしまい。またね。</p>`
     },
     7: { // U1-7 Phonics: c, g, m, n
         en: `<h3>🇺🇸 English Script</h3>
-<p><strong>c:</strong> cat, cup, cap, cut, cub</p>
-<p><strong>g:</strong> got, gum, gap, gas, gun</p>
-<p><strong>m:</strong> map, mat, mom, mud, mix</p>
-<p><strong>n:</strong> net, nap, nod, nut, nip</p>`,
+<p><em>※イラストでわかりにくい単語のみ、和訳を入れています。以下を参照してください。</em></p>
+<p>gum<br>get<br>man<br>men<br>nap<br>not</p>`,
         ja: `<h3>🇯🇵 日本語スクリプト</h3>
-<p><strong>c:</strong> cat(ネコ), cup(カップ), cap(ぼうし), cut(切る), cub(子グマ)</p>
-<p><strong>g:</strong> got(手に入れた), gum(ガム), gap(すきま), gas(ガス), gun(銃)</p>
-<p><strong>m:</strong> map(地図), mat(マット), mom(お母さん), mud(泥), mix(混ぜる)</p>
-<p><strong>n:</strong> net(網), nap(昼寝), nod(うなずく), nut(木の実), nip(つまむ)</p>`
+<p><em>※イラストでわかりにくい単語のみ、和訳を入れています。以下を参照してください。</em></p>
+<p>gum (ガム)<br>get (手に入れる)<br>man (男の人)<br>men (manの複数形)<br>nap (昼ね)<br>not (〜でない)</p>`
     },
     8: { // U1-8 Close-Up
         en: `<h3>🇺🇸 English Script</h3>
-<p><span class="speaker">Kate:</span> Look at this poster!</p>
-<p><span class="speaker">Owen:</span> What is it?</p>
-<p><span class="speaker">Kate:</span> It's a poster for the school festival.</p>
-<p><span class="speaker">Owen:</span> That looks cool!</p>
-<p><span class="speaker">Kate:</span> Yeah, we can play games and eat food.</p>
-<p><span class="speaker">Owen:</span> When is it?</p>
-<p><span class="speaker">Kate:</span> It's next Saturday.</p>
-<p><span class="speaker">Owen:</span> Great! I can't wait!</p>`,
+<p><span class="speaker">Chester:</span> My thermos.<br>Your thermos.</p>
+<p><span class="speaker">Steve:</span> Yes. This is my thermos.<br>And this is your thermos.</p>
+<p><span class="speaker">Chester:</span> This is my thermos.</p>
+<p><span class="speaker">Chester:</span> My cap.<br>Ann's cap.</p>
+<p><span class="speaker">Steve:</span> Yes. This is Ann's cap.<br>And this is your cap.</p>
+<p><span class="speaker">Chester:</span> This is my cap.</p>
+<p><span class="speaker">Chester:</span> See you later.</p>
+<p><span class="speaker">Steve:</span> See you.</p>`,
         ja: `<h3>🇯🇵 日本語スクリプト</h3>
-<p><span class="speaker">ケイト：</span>このポスターを見て！</p>
-<p><span class="speaker">オーウェン：</span>何？</p>
-<p><span class="speaker">ケイト：</span>学校祭のポスターだよ。</p>
-<p><span class="speaker">オーウェン：</span>かっこいいね！</p>
-<p><span class="speaker">ケイト：</span>うん、ゲームをしたり食べ物を食べたりできるよ。</p>
-<p><span class="speaker">オーウェン：</span>いつなの？</p>
-<p><span class="speaker">ケイト：</span>来週の土曜日だよ。</p>
-<p><span class="speaker">オーウェン：</span>すごい！待ちきれないよ！</p>`
+<p><span class="speaker">チェスター：</span>ぼくの水とう。<br>君の水とう。</p>
+<p><span class="speaker">スティーブ：</span>そうだよ。これは ぼくの水とうだよ。<br>そして、これは君の水とうだよ。</p>
+<p><span class="speaker">チェスター：</span>これは ぼくの水とう。</p>
+<p><span class="speaker">チェスター：</span>ぼくの野球ぼう。<br>アンの野球ぼう。</p>
+<p><span class="speaker">スティーブ：</span>そうだね。これはアンの野球ぼうだね。<br>そして、これは君の野球ぼうだね。</p>
+<p><span class="speaker">チェスター：</span>これは ぼくの野球ぼう。</p>
+<p><span class="speaker">チェスター：</span>じゃあね。</p>
+<p><span class="speaker">スティーブ：</span>またね。</p>`
     },
 
     // ===== Unit 2 =====
     9: { // U2-1 Let's Study! "Where's My Backpack?"
         en: `<h3>🇺🇸 English Script</h3>
-<p><span class="speaker">Charlie:</span> Mom, where's my backpack?</p>
-<p><span class="speaker">Mom:</span> It's on the chair, Charlie.</p>
-<p><span class="speaker">Charlie:</span> No, it isn't. Where's my cap?</p>
-<p><span class="speaker">Mom:</span> It's on the table.</p>
-<p><span class="speaker">Charlie:</span> Oh no. I'm late. Bye, Mom!</p>
-<p><span class="speaker">Mom:</span> Wait, Charlie! Your lunch!</p>
-<p><span class="speaker">Charlie:</span> Oops! Thanks, Mom!</p>
+<p><span class="speaker">Charlie:</span> Hi, Mom.</p>
+<p><span class="speaker">Mom:</span> Hi, Charlie.</p>
+<p><span class="speaker">Charlie:</span> I'm going to go to soccer<br>practice.<br>Where's my ball?</p>
+<p><span class="speaker">Mom:</span> It's in front of the trash can.</p>
+<p><span class="speaker">Charlie:</span> Thanks, Mom.</p>
+<p><span class="speaker">Kate:</span> Mom, I'm going to go to the<br>park.<br>Where's my cap?</p>
+<p><span class="speaker">Mom:</span> It's behind the vase.</p>
+<p><span class="speaker">Kate:</span> Thanks, Mom.</p>
+<p><span class="speaker">Dad:</span> Where's my backpack?</p>
+<p><span class="speaker">Kate:</span> Dad, it's on your back.</p>
+<p><span class="speaker">Dad:</span> Oh ...</p>
 <p><span class="speaker">Stanley:</span> Now, let's check today's target.</p>
 <hr>
 <p><em>★ Point:</em></p>
-<p><span class="speaker">Narrator:</span> Where is the ball? It's under the table. Where is the cat? It's on the bed.</p>
-<p><span class="speaker">Stanley:</span> Good job! That's it for now. See you next time.</p>`,
+<p><span class="speaker">Narrator:</span> Where's the jump rope?<br>It's in front of the door.<br>Where's the ball?<br>It's behind the box.</p>
+<p><span class="speaker">Stanley:</span> Good job! That's it for now.<br>See you next time.</p>`,
         ja: `<h3>🇯🇵 日本語スクリプト</h3>
-<p><span class="speaker">チャーリー：</span>お母さん、ぼくのリュックはどこ？</p>
-<p><span class="speaker">お母さん：</span>いすの上よ、チャーリー。</p>
-<p><span class="speaker">チャーリー：</span>ないよ。ぼくのぼうしはどこ？</p>
-<p><span class="speaker">お母さん：</span>テーブルの上よ。</p>
-<p><span class="speaker">チャーリー：</span>あ、遅刻だ。行ってきます！</p>
-<p><span class="speaker">お母さん：</span>待って、チャーリー！お弁当よ！</p>
-<p><span class="speaker">チャーリー：</span>おっと！ありがとう、お母さん！</p>
+<p><span class="speaker">チャーリー：</span>やあ、お母さん。</p>
+<p><span class="speaker">母：</span>やあ、チャーリー。</p>
+<p><span class="speaker">チャーリー：</span>ぼく、サッカーの練習に行ってくるよ。<br><br>ぼくのボールは どこ？</p>
+<p><span class="speaker">母：</span>ごみ箱の前よ。</p>
+<p><span class="speaker">チャーリー：</span>ありがとう、お母さん。</p>
+<p><span class="speaker">ケイト：</span>お母さん、わたしは公園に行ってくるね。<br><br>わたしの野球ぼうは どこ？</p>
+<p><span class="speaker">母：</span>花びんの後ろよ。</p>
+<p><span class="speaker">ケイト：</span>ありがとう、お母さん。</p>
+<p><span class="speaker">父：</span>わたしのリュックサックは どこかな。</p>
+<p><span class="speaker">ケイト：</span>お父さん、背中にしょっているよ。</p>
+<p><span class="speaker">父：</span>おっと…。</p>
 <p><span class="speaker">スタンリー：</span>さあ、今日のターゲットを確認しよう。</p>
 <hr>
 <p><em>★ポイント説明：</em></p>
-<p><span class="speaker">ナレーター：</span>ボールはどこですか。テーブルの下です。ネコはどこですか。ベッドの上です。</p>
-<p><span class="speaker">スタンリー：</span>よくできました！今回はこれでおしまい。またね。</p>`
+<p><span class="speaker">ナレーター：</span>なわとびは どこですか。<br>ドアの前です。<br>ボールは どこですか。<br>箱の後ろです。</p>
+<p><span class="speaker">スタンリー：</span>よくできました！ 今回は これでおしまい。<br>またね。</p>`
     },
     10: { // U2-2 Introduction "Seeds"
         en: `<h3>🇺🇸 English Script</h3>
-<p><span class="speaker">Narrator:</span> These are seeds. Seeds come in many different shapes, sizes, and colors. Some seeds are very big. Some seeds are very small.</p>
-<p>How do seeds travel? Some seeds travel by wind. Some seeds travel by water. Some seeds travel by animals.</p>
-<p>When a seed finds a good place, it starts to grow. First, a root grows down. Then, a stem grows up. Leaves grow on the stem. The plant gets bigger and bigger.</p>
-<p>Finally, the plant makes new seeds. And the cycle starts again!</p>`,
+<p><span class="speaker">Narrator:</span> Flowers are plants.<br>Each flower looks different.<br>Some plants grow from seeds.<br>Some plants grow from bulbs.<br>Plants need sun and rain to grow.<br>Leaves come out and flowers bloom.<br>Then, some grow fruit, and some grow<br>vegetables.</p>
+<p>Look. These are blueberry,<br>carrot, and onion flowers.<br>They're beautiful, aren't they?<br>This is how plants grow.</p>`,
         ja: `<h3>🇯🇵 日本語スクリプト</h3>
-<p><span class="speaker">ナレーター：</span>これらは種です。種にはさまざまな形、大きさ、色があります。とても大きい種もあれば、とても小さい種もあります。</p>
-<p>種はどうやって移動するのでしょうか。風で移動する種もあります。水で移動する種もあります。動物によって運ばれる種もあります。</p>
-<p>種がよい場所を見つけると、成長を始めます。まず、根が下に伸びます。次に、茎が上に伸びます。茎に葉が生えます。植物はどんどん大きくなります。</p>
-<p>最後に、植物は新しい種を作ります。そしてまたサイクルが始まるのです！</p>`
-    }
-};
-// 残りのチャプター(11-68)のスクリプトデータは順次追加予定
+<p><span class="speaker">ナレーター：</span>花は植物です。<br>花は それぞれちがった容姿をしています。<br>植物には種から育つものもあれば、<br>球根から育つものもあります。<br>植物が育つには太陽と雨が必要です。<br>芽が出て、花が咲きます。<br>そして、果物がなるものもあれば、野菜が<br>なるものもあります。</p>
+<p>見てください。これらは、ブルーベリー、<br>ニンジン、タマネギの花です。<br>きれいですね。<br>このように植物は成長するのです。</p>`
+    },
+    11: { // U2-3 Phonics f, v, s, z
+        en: `<h3>🇺🇸 English Script</h3>
+<p><em>※イラストでわかりにくい単語のみ、和訳を入れています。以下を参照してください。</em></p>
+<p>fin<br>fun<br>fog<br>van<br>sit<br>zip</p>`,
+        ja: `<h3>🇯🇵 日本語スクリプト</h3>
+<p><em>※イラストでわかりにくい単語のみ、和訳を入れています。以下を参照してください。</em></p>
+<p>fin （魚の）ひれ<br>fun 楽しいこと<br>fog きり<br>van ワゴン車<br>sit 座る<br>zip ファスナーを閉じる（開く）</p>`
+    },
+    12: { // U2-4 Let's Study! "At a Flea Market"
+        en: `<h3>🇺🇸 English Script</h3>
+<p><span class="speaker">Charlie:</span> Wow! There are so many things.</p>
+<p><span class="speaker">Amber:</span> Look. These are small globes.</p>
+<p><span class="speaker">Kate:</span> Those are thick books.</p>
+<p><span class="speaker">Owen:</span> Whoa! They're so heavy.</p>
+<p><span class="speaker">Charlie:</span> Oh, look. These are big pants.</p>
+<p><span class="speaker">Owen:</span> They're big enough for both of us to wear.<br>Excuse me.</p>
+<p><span class="speaker">Shop Clerk:</span> Yes?</p>
+<p><span class="speaker">Owen:</span> Can we try these on?</p>
+<p><span class="speaker">Shop Clerk:</span> OK.</p>
+<p><span class="speaker">C&O:</span> Yes!</p>
+<p><span class="speaker">K&A:</span> That's funny.</p>
+<p><span class="speaker">Stanley:</span> Now, let's check today's target.</p>
+<hr>
+<p><em>★ Point:</em></p>
+<p><span class="speaker">Narrator:</span> These are thick magazines.<br>Those are thin magazines.</p>
+<p><span class="speaker">Stanley:</span> Good job! That's it for now.<br>See you next time.</p>`,
+        ja: `<h3>🇯🇵 日本語スクリプト</h3>
+<p><span class="speaker">チャーリー：</span>わあ！ とても たくさんのものがあるよ。</p>
+<p><span class="speaker">アンバー：</span>見て。これらは小さい地球儀だよ。</p>
+<p><span class="speaker">ケイト：</span>あれらは あつい本だね。</p>
+<p><span class="speaker">オーウェン：</span>おお！ とても重いよ。</p>
+<p><span class="speaker">チャーリー：</span>あ、見て。これは大きいズボンだね。</p>
+<p><span class="speaker">オーウェン：</span>ぼくたち、二人ではくのに十分な大きさだね。<br>すみません。</p>
+<p><span class="speaker">店員：</span>はい。</p>
+<p><span class="speaker">オーウェン：</span>これをはいてもいいですか。</p>
+<p><span class="speaker">店員：</span>いいですよ。</p>
+<p><span class="speaker">チ＆オ：</span>やった！</p>
+<p><span class="speaker">ケ＆ア：</span>おもしろいね。</p>
+<p><span class="speaker">スタンリー：</span>さあ、今日のターゲットを確認しよう。</p>
+<hr>
+<p><em>★ポイント説明：</em></p>
+<p><span class="speaker">ナレーター：</span>これらは あつい雑誌です。<br>あれらは うすい雑誌です。</p>
+<p><span class="speaker">スタンリー：</span>よくできました！ 今回は これでおしまい。<br>またね。</p>`
+    },
+    13: { // U2-5 Phonics l, r, w, y
+        en: `<h3>🇺🇸 English Script</h3>
+<p><em>※イラストでわかりにくい単語のみ、和訳を入れています。以下を参照してください。</em></p>
+<p>lap<br>lip<br>log<br>run<br>rug<br>wet<br>win<br>wig<br>yen<br>yes</p>`,
+        ja: `<h3>🇯🇵 日本語スクリプト</h3>
+<p><em>※イラストでわかりにくい単語のみ、和訳を入れています。以下を参照してください。</em></p>
+<p>lap ひざ<br>lip くちびる<br>log 丸太<br>run 走る<br>rug ラグ（敷物）<br>wet ぬれた<br>win 勝つ<br>wig かつら<br>yen （日本）円<br>yes はい</p>`
+    },
+    14: { // U2-6 Let's Study! "Cool Trading Cards"
+        en: `<h3>🇺🇸 English
