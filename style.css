@@ -19,7 +19,7 @@ body {
     overflow: hidden;
     background-image: url('jacket.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: top center;
     background-attachment: fixed;
 }
 
