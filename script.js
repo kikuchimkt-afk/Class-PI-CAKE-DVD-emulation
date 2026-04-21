@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === 動画再生 ===
     const playChapter = (chapterNum) => {
+        document.querySelector('.video-and-script').style.display = 'flex';
         const fileUrl = `videos/chapter_${chapterNum}.mp4`;
         videoSource.src = fileUrl;
         video.load();
@@ -198,10 +199,5 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.remove('hidden');
     });
 
-    // 最初のチャプターを選択
-    if (chapterListEl.querySelector('.chapter-item')) {
-        chapterListEl.querySelector('.chapter-item').click();
-        video.pause();
-        overlay.classList.remove('hidden');
-    }
+    // 初期状態では何も選択せず、背景のみを表示する
 });
