@@ -28,7 +28,7 @@ var SCRIPT_DATA = {
 <p><span class="speaker">Stanley:</span> Now, let's check today's target.</p>
 <hr>
 <p><em>★ Point:</em></p>
-<p><span class="speaker">Narrator:</span> Are you Charlie's sister?<br>Yes, I am.<br>Are you Charlie's mother?<br>No, I'm not.</p>
+<p><span class="speaker">Narrator:</span> Are you Charlie's sister?<br>Yes, I am.<br>Are you Charlie's sister?<br>No, I'm not.</p>
 <p><span class="speaker">Stanley:</span> Good job! That's it for now. See you next time.</p>`,
         ja: `<h3>🇯🇵 日本語スクリプト</h3>
 <p><span class="speaker">オーウェン：</span>こんにちは。</p>
@@ -55,7 +55,7 @@ var SCRIPT_DATA = {
 <p><span class="speaker">スタンリー：</span>さあ、今日のターゲットを確認しよう。</p>
 <hr>
 <p><em>★ポイント説明：</em></p>
-<p><span class="speaker">ナレーター：</span>あなたはチャーリーのお姉さんですか。<br>はい、そうです。<br>あなたはチャーリーのお母さんですか。<br>いいえ、ちがいます。</p>
+<p><span class="speaker">ナレーター：</span>あなたはチャーリーのお姉さんですか。<br>はい、そうです。<br>あなたはチャーリーのお姉さんですか。<br>いいえ、ちがいます。</p>
 <p><span class="speaker">スタンリー：</span>よくできました！今回はこれでおしまい。またね。</p>`
     },
     2: { // U1-2 Let's Study! "At School"
