@@ -1,12 +1,11 @@
 :root {
-    --bg-color: #0f172a;
-    --surface-color: #1e293b;
-    --surface-hover: #334155;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --accent-color: #3b82f6;
-    --accent-hover: #2563eb;
-    --border-color: rgba(255, 255, 255, 0.1);
+    --text-primary: #333333;
+    --text-secondary: #ff7043; /* Fun orange for units */
+    --accent-color: #29b6f6; /* Bright sky blue for active items */
+    --accent-hover: #039be5;
+    --surface-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white for glassmorphism */
+    --surface-hover: rgba(255, 235, 59, 0.6); /* Fun yellow on hover */
+    --border-color: rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -16,13 +15,30 @@
 }
 
 body {
-    font-family: 'Noto Sans JP', sans-serif;
-    background-color: var(--bg-color);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     color: var(--text-primary);
     height: 100vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    /* Background setup with jacket.jpg */
+    background-image: url('jacket.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Bright overlay to ensure good contrast and a light mode feel */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Lightens the background image */
+    backdrop-filter: blur(5px); /* Softens the background for better text readability */
+    z-index: -1;
 }
 
 .app-container {
@@ -34,20 +50,23 @@ body {
 .app-header {
     padding: 15px 30px;
     background: var(--surface-color);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 3px solid var(--accent-color);
     flex-shrink: 0;
     z-index: 10;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .app-header h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ff5722; /* Fun, energetic orange header */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .app-header h1 span {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--text-secondary);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-color);
     margin-left: 10px;
 }
 
@@ -58,29 +77,32 @@ body {
 }
 
 .sidebar {
-    width: 300px;
+    width: 320px;
     background: var(--surface-color);
-    border-right: 1px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
 }
 
 .sidebar-header {
     padding: 20px;
-    border-bottom: 1px solid var(--border-color);
-    background: rgba(0,0,0,0.1);
+    border-bottom: 2px dashed #ccc;
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .sidebar-header h2 {
-    font-size: 1.2rem;
-    color: var(--text-primary);
+    font-size: 1.4rem;
+    color: var(--accent-color);
+    font-weight: 800;
+    text-align: center;
 }
 
 .chapter-list {
     flex: 1;
     overflow-y: auto;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 .unit-group {
@@ -88,31 +110,40 @@ body {
 }
 
 .unit-title {
-    padding: 10px 20px;
-    font-weight: 700;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    font-size: 0.85rem;
+    padding: 12px 20px;
+    font-weight: 800;
+    color: white;
+    background-color: var(--text-secondary);
+    font-size: 1rem;
     letter-spacing: 1px;
+    margin-top: 10px;
+    border-radius: 0 20px 20px 0;
+    width: 90%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .chapter-item {
     padding: 12px 20px 12px 30px;
     cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
-    font-size: 0.95rem;
-    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    font-weight: 700;
+    border-left: 5px solid transparent;
+    margin: 4px 10px;
+    border-radius: 8px;
 }
 
 .chapter-item:hover {
     background-color: var(--surface-hover);
+    transform: translateX(5px);
 }
 
 .chapter-item.active {
-    background-color: rgba(59, 130, 246, 0.1);
-    color: var(--accent-color);
+    background-color: rgba(41, 182, 246, 0.2);
+    color: #0277bd;
     border-left-color: var(--accent-color);
-    font-weight: 500;
+    font-weight: 800;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .player-wrapper {
@@ -121,7 +152,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 30px;
-    background-image: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
     overflow-y: auto;
 }
 
@@ -130,10 +160,11 @@ body {
     width: 100%;
     max-width: 1024px;
     aspect-ratio: 16 / 9;
-    border-radius: 12px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     background: #000;
+    border: 5px solid white;
 }
 
 video {
@@ -151,7 +182,7 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.3);
     transition: opacity 0.3s ease;
     cursor: pointer;
 }
@@ -162,39 +193,45 @@ video {
 }
 
 .play-btn {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    background: #ffeb3b; /* Bright yellow play button */
+    border: 4px solid white;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.play-btn svg {
+    fill: #ff5722;
+    margin-left: 5px; /* Center the triangle visually */
 }
 
 .play-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: scale(1.1);
+    transform: scale(1.15);
+    background: #ffc107;
 }
 
 .app-footer {
-    display: none; /* hidden for full app view */
+    display: none; 
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: transparent;
+    background: rgba(255,255,255,0.5);
+    border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
+    background: #ffab91;
+    border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: #ff7043;
 }
