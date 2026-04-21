@@ -24,27 +24,47 @@
                 </div>
             </aside>
             
-            <main class="player-wrapper">
-                <div class="video-container">
-                    <video id="mainVideo" controls controlsList="nodownload">
-                        <source src="" type="video/mp4" id="videoSource">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="custom-overlay" id="videoOverlay">
-                        <button id="playBtn" class="play-btn" aria-label="Play Video">
-                            <svg viewBox="0 0 24 24" width="48" height="48" fill="white">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
-                        </button>
+            <main class="content-area">
+                <div class="video-and-script">
+                    <div class="video-section">
+                        <div class="video-container">
+                            <video id="mainVideo" controls controlsList="nodownload">
+                                <source src="" type="video/mp4" id="videoSource">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="custom-overlay" id="videoOverlay">
+                                <button id="playBtn" class="play-btn" aria-label="Play Video">
+                                    <svg viewBox="0 0 24 24" width="48" height="48" fill="white">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Script Toggle Buttons -->
+                        <div class="script-toggles">
+                            <button id="toggleEn" class="toggle-btn toggle-en" title="英文スクリプトの表示/非表示">
+                                🇺🇸 English Script
+                            </button>
+                            <button id="toggleJa" class="toggle-btn toggle-ja" title="日本語スクリプトの表示/非表示">
+                                🇯🇵 日本語スクリプト
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Script Display Panel -->
+                    <div class="script-panel" id="scriptPanel">
+                        <div class="script-column script-en" id="scriptEn">
+                            <p class="no-script">Select a chapter to view the script.</p>
+                        </div>
+                        <div class="script-column script-ja" id="scriptJa">
+                            <p class="no-script">チャプターを選択するとスクリプトが表示されます。</p>
+                        </div>
                     </div>
                 </div>
             </main>
         </div>
-        
-        <footer class="app-footer">
-            <p>&copy; PI CAKE Project.</p>
-        </footer>
     </div>
+    <script src="scripts_data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
